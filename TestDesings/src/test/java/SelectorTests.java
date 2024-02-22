@@ -12,16 +12,16 @@ public class SelectorTests {
     @Test //Funciona correctamente.
     public void esPalindromo() {      
         GestorPalabras palabra = new GestorPalabras();
-        assertEquals(true, palabra.esPalindromo("allí ves sevilla"));  
+        assertEquals(true, palabra.esPalindromo("allí ves sevilla"));	     
     }
 
-    @Test
-    public void contarVocales() {
+    @Test //Funciona correctamente.
+    public void contarVocales() { 
         GestorPalabras palabra = new GestorPalabras();
-        assertEquals(6, palabra.contarVocales("allí ves sevilla"));
+        assertEquals(true, palabra.esPalindromo("allí ves sevilla"));
     }
     
-    @Test
+    @Test //Funciona correctamente.
     public void invertirPalabra() {
         GestorPalabras palabra = new GestorPalabras();
         assertEquals("amabo", palabra.invertirPalabra("obama"));

@@ -34,17 +34,19 @@ public class GestorPalabras {
         }
         return contador;
     }
-
+   
     public String invertirPalabra(String palabra) {
         StringBuilder resultado = new StringBuilder();
-        for (int i = palabra.length() - 2; i >= 0; i--) {
+        for (int i = palabra.length() - 1; i >= 0; i--) { //Cambiamos el -2 que le restaba al palabra.length() por un -1, ya que te quitaba una letra en el reversible.
             resultado.append(palabra.charAt(i));
         }
         return resultado.toString();
     }
+
     public static String skipearAcentos(String uwu) {
         uwu = Normalizer.normalize(uwu, Normalizer.Form.NFD);
         uwu = uwu.replaceAll("[\p{InCombiningDiacriticalMarks}]", "");
         return uwu;
     }
+
 }
