@@ -7,7 +7,7 @@ import org.junit.Test;
  * @author Enrique, Saúl y Héctor <3.
  */
 
-public class SelectorTests {
+public class GestorPalabrasTest {
     
     @Test //Funciona correctamente.
     public void esPalindromo() {      
