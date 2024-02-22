@@ -25,8 +25,9 @@ public class GestorPalabras {
     public int contarVocales(String palabra) {
         int contador = 0;
         for (int i = 0; i < palabra.length(); i++) {
-            char caracter = Character.toLowerCase(palabra.charAt(i));
-            if (caracter != 'a' && caracter != 'e' && caracter != 'i' && caracter != 'o' && caracter != 'u') {
+            char caracter = Character.toLowerCase(palabra.charAt(i)); //Aqui necesitamos poner nuestro metrodo para los acentos
+            if (caracter == 'a' || caracter == 'e' || caracter == 'i'  || caracter == 'o' || caracter == 'u') {
+                //Cambiamos el != por == parea que cuente solo las vocales, a parte tambien cambiamos los && por || para que sean solo las vocales.
                 contador++;
             }
         }
