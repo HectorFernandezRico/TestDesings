@@ -1,6 +1,8 @@
 
 import com.mycompany.testdesings.*;
+import org.junit.After;
 import static org.junit.Assert.assertEquals;
+import org.junit.Before;
 import org.junit.Test;
 
 /*
@@ -9,9 +11,20 @@ import org.junit.Test;
 
 public class GestorPalabrasTest {
     
+    private GestorPalabras palabra;
+
+    @Before //Inicializa esto en todos los @Test: GestorPalabras palabra = new GestorPalabras();
+    public void setUp() {
+        palabra = new GestorPalabras(); 
+    }
+    
+    @After
+    public void tearDown() { // Aquí puedes realizar tareas de limpieza, liberación de recursos, etc.
+        palabra = null; // Establece la referencia del objeto a null para liberar la memoria.
+    }
+    
     @Test //Funciona correctamente.
     public void esPalindromo() {      
-        GestorPalabras palabra = new GestorPalabras();
         assertEquals(true, palabra.esPalindromo("allí ves sevilla"));
 	assertEquals(false, palabra.esPalindromo("jesús todo poderoso"));	
 	assertEquals(true, palabra.esPalindromo("amo la paloma"));
@@ -25,7 +38,6 @@ public class GestorPalabrasTest {
 
     @Test
     public void contarVocales() { //Funciona correctamente.
-        GestorPalabras palabra = new GestorPalabras();
         assertEquals(16, palabra.contarVocales("Toji Fushiguro Mejor qúe tu novió GEGE"));
         assertEquals(6, palabra.contarVocales("Algó ándaba mal"));
         assertEquals(14, palabra.contarVocales("Péro mí egó me condeno a la derrota"));
@@ -41,7 +53,6 @@ public class GestorPalabrasTest {
     
     @Test
     public void invertirPalabra() { //Funciona correctamente.
-        GestorPalabras palabra = new GestorPalabras();
         assertEquals("amabo", palabra.invertirPalabra("obama"));
         assertEquals("ordep", palabra.invertirPalabra("Pedro"));
         assertEquals("saiasi", palabra.invertirPalabra("Isaias"));
