@@ -9,10 +9,10 @@ import org.junit.Test;
 
 public class SelectorTests {
 
-    @Test
-    public void esPalindromo() {
+    @Test //Funciona correctamente.
+    public void esPalindromo() {      
         GestorPalabras palabra = new GestorPalabras();
-        assertEquals(true, palabra.esPalindromo("allí ves sevilla"));
+        assertEquals(true, palabra.esPalindromo("allí ves sevilla"));  
     }
 
     @Test
