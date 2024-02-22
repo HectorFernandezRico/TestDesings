@@ -1,4 +1,12 @@
+
+package com.mycompany.testdesings;
+
+/*
+ * @author Enrique, Saúl y Héctor <3.
+ */
+
 public class GestorPalabras {
+
     public boolean esPalindromo(String palabra) {
         String palabraFormateada = palabra.replaceAll("\\s+", "").toLowerCase();
         
